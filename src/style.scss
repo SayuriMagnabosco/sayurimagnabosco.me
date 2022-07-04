@@ -1,0 +1,19 @@
+body, html {
+  font-family: "Poppings", sans-serif;
+  // background: linear-gradient(to bottom, #03709b 0%,#034f7f 50%,#022450 100%);
+  background: #011140;
+  height: 100%;
+  overflow: auto;
+  margin:0px;
+  box-sizing: border-box;
+  padding-bottom: 20px;
+}
+.end-space{
+  height: 500px;
+}
+
+.active {
+color: #76c6e6e0 !important;
+text-decoration: underline !important;
+}
+
