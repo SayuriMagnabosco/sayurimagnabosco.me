@@ -1,7 +1,7 @@
 /* eslint-disable react/button-has-type */
 /* eslint-disable no-unused-vars */
 /* eslint-disable import/no-named-as-default */
-import { useRef, React } from 'react';
+import React from 'react';
 import {
   BrowserRouter as Router, Route, Routes, NavLink,
 } from 'react-router-dom';
@@ -15,13 +15,16 @@ import HomePage from './homePage';
 import WorksFeed from './worksFeed';
 import AboutMe from './aboutMe';
 import RandomMe from './randomMe';
+import NavBar from './Navbar/navBar';
+
 // import Veridium from './veridium';
 
 function App(props) {
   return (
     <Router>
       <div>
-        <Nav />
+        {/* <Nav /> */}
+        <NavBar />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/work" element={<WorksFeed />} />
@@ -36,12 +39,6 @@ function App(props) {
 }
 
 function Nav(props) {
-  const navRef = useRef();
-
-  const showNavbar = () => {
-    navRef.current.classList.toggle('responsive_nav');
-  };
-
   return (
     <header className="header" id="header">
       <nav className="nav container">
@@ -77,20 +74,6 @@ function Nav(props) {
         </div>
       </nav>
     </header>
-  // <header>
-  //   <h3>Logo</h3>
-  //   <nav ref={navRef}>
-  //     <a href="/#">Home</a>
-  //     <a href="/#">Home</a>
-  //     <a href="/#">Home</a>
-  //     <button className="nav-btn nav-close-btn" onClick={showNavbar}>
-  //       <UilClose />
-  //     </button>
-  //   </nav>
-  //   <button className="nav-btn" onClick={showNavbar}>
-  //     <UilHamburgerMenu />
-  //   </button>
-  // </header>
   );
 }
 
